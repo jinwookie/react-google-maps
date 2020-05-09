@@ -1,6 +1,6 @@
 import React, { FC, lazy, Suspense } from 'react';
 import { hot } from 'react-hot-loader/root';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter, Link } from 'react-router-dom';
 
 import './styles.scss';
 
@@ -12,6 +12,9 @@ const App: FC = () => (
   <BrowserRouter>
     <Suspense fallback={<div>Loading...</div>}>
       <div className="container">
+        <nav>
+          <Link to="/search">Search</Link>
+        </nav>
         <main className="main-content">
           <Switch>
             <Route path="/" exact strict component={HomePage} />
