@@ -6,6 +6,7 @@ import './styles.scss';
 
 const HomePage = lazy(() => import('../../pages/HomePage'));
 const SearchPage = lazy(() => import('../../pages/SearchPage'));
+const SignUpPage = lazy(() => import('../../pages/SignUpPage'));
 const NotFoundPage = lazy(() => import('../../pages/NotFoundPage'));
 
 const App: FC = () => (
@@ -19,6 +20,7 @@ const App: FC = () => (
           <Switch>
             <Route path="/" exact strict component={HomePage} />
             <Route path="/search" exact strict component={SearchPage} />
+            <Route path="/signup" exact strict component={SignUpPage} />
             <Route path="*" component={NotFoundPage} />
           </Switch>
         </main>
